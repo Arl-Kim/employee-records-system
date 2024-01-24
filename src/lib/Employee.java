@@ -64,4 +64,21 @@ public class Employee {
         salary = news.nextDouble();
     }
     
+    /**
+     * Calculates and prints the salary details of the employee, including gross salary, tax, and net pay.
+     */
+    public void getSalary(){
+        double tax = salary * 0.2;
+        double net = salary - tax;
+        System.out.println("Name: " + name + "\nGross: " + salary + "\nTax: " + tax + "\nNet pay: " + net);
+    }
+    
+    /**
+     * Prints general details of the employee, including name, gender, year of birth, department, and gross pay.
+     */
+    public void getDetails(){
+        System.out.println(name + " is " + gender + " born in " + yob + ".\nThey are in " + dept +
+                " with gross pay of " + salary);
+    }
+    
 }
