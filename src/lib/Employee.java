@@ -26,4 +26,9 @@ public class Employee {
     protected int fnumber;
     protected double salary;
 
+    /**
+     * Scanner object for taking user input.
+     */
+    Scanner news = new Scanner(System.in);
+    
 }
