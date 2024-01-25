@@ -46,4 +46,34 @@ public class Manager extends Employee {
         allowance = salary * 0.1;
         salary = salary + allowance;
     }
+    
+    /**
+     * Allows a Manager to change the department of a given employee.
+     *
+     * @param emp The Employee object whose department is to be changed.
+     */
+    public void changeDept(Employee emp){
+        System.out.println(emp.name + " Is In The " + emp.dept + " Department\nEnter New Department For " + emp.name);
+        emp.dept = scan.nextLine();
+    }
+    
+    /**
+     * Allows a manager to adjust the salary of a given employee.
+     *
+     * @param emp The Employee object whose salary is to be adjusted.
+     */
+    public void adjustSalary(Employee emp){
+        System.out.println("Enter New Salary For " + emp.name);
+        emp.salary = scan.nextDouble();
+    }
+    
+    /**
+     * Overrides the getDetails() method in the Employee parent class to include information specific to managers.
+     * Calls the super.getDetails() method to display general employee details and adds manager-specific details.
+     */
+    @Override
+    public void getDetails(){
+        super.getDetails();
+        System.out.println("Your Current Role In The System Is: MANAGER");
+    }
 }
